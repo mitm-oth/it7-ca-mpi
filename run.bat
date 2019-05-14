@@ -1,0 +1,1 @@
+"C:\Program Files\Microsoft MPI\Bin\mpiexec.exe" -n 2 MpiHelloWorld.exe

@@ -1,1 +1,24 @@
+#!/bin/bash
 
+#@ output = job$(jobid).out
+#@ error = job$(jobid).err
+#@ job_type = mpich
+#@ class = test
+#@ island_count=1
+#@ node = 1
+#@ total_tasks = 2
+#@ network.MPI = sn_all,not_shared,us
+#@ wall_clock_limit = 0:29:00
+#@ initialdir = $(home)/MPIHelloWorld
+#@ notification = always
+#@ notify_user = vorname@nachna.me
+#@ queue
+#@ job_name = MPIHelloWorld
+
+. /etc/profile
+. /etc/profile.d/modules.sh
+
+module unload mpi.ibm
+module load mpi.intel
+
+mpiexec ./MPIHelloWorld.bin

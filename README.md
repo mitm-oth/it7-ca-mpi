@@ -2,31 +2,9 @@
 
 ## Installation unter Linux oder WSL
 
-[Link zur Originalanleitung](https://amithkk.medium.com/setting-up-visual-studio-code-and-wsl-for-mpi-develoment-8df55758a31c)
+Anweisungen von hier befolgen: [WSL/VM installieren](https://bookstack.kamaux.de/books/it-tools/page/wslvm-installieren)
 
-### WSL Aufsetzen
-
-[Ubuntu unter windows installieren](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?hl=en-us&gl=us&activetab=pivot%3Aoverviewtab)
-
-oder in der cmd ausführen:
-
-```bat
-wsl --install -d Ubuntu
-```
-
-Anschließend einen Nutzernamen und ein Passwort eingeben.
-
-#### Fehler "The Windows Subsystem for Linux optional component is not enabled"
-
-WSL muss erst aktiviert werden:
-
-Powershell als Admin öffnen und
-
-```bat
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-```
-
-### Installation OpenMPI
+## Installation OpenMPI
 
 WSL starten (Windows Taste + "Ubuntu", oder in der Console `wsl` eingeben)
 
@@ -41,7 +19,7 @@ mpicc --showme:version
 echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 ```
 
-### Repository klonen
+## Repository klonen
 
 Stelle sicher das du im dem Ordner bist, in dem das Repository gespeichert werden soll.  
 Unter WSL sind alle Windowsdateien unter `/mnt/c/` (oder `/mnt/d/` etc.) zu finden.

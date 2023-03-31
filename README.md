@@ -8,6 +8,11 @@
 
 [Ubuntu unter windows installieren](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?hl=en-us&gl=us&activetab=pivot%3Aoverviewtab)
 
+oder in der Console ausführen:
+
+```bat
+wsl --install -d Ubuntu
+```
 
 ### Installation Linux / WSL
 
@@ -23,15 +28,19 @@ mpicc --showme:version
 
 script:
 
-    ./serve.sh
+```bash
+./serve.sh
+```
 
 manuell:
 
-    mpicc mpi_hello_world.c -o mpi_hello_world
+```bash
+mpicc mpi_hello_world.c -o mpi_hello_world
 
-    chmod +x mpi_hello_world.out
+chmod +x mpi_hello_world.out
 
-    mpirun -np 2 ./mpi_hello_world
+mpirun -np 2 ./mpi_hello_world
+```
 
 
 ## Installation unter Windows

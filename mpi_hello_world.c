@@ -27,6 +27,10 @@ int main(int argc, char **argv)
         MPI_Recv(helloStr, 12, MPI_CHAR, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         printf("Rank 1 received string %s from Rank 0\n", helloStr);
     }
+    else
+    {
+        printf("Rank %d is not used\n", rank);
+    }
 
     MPI_Finalize();
     return 0;

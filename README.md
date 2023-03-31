@@ -4,27 +4,34 @@
 
 [Link zur Originalanleitung](https://amithkk.medium.com/setting-up-visual-studio-code-and-wsl-for-mpi-develoment-8df55758a31c)
 
-### Installation Linux
+### WSL Aufsetzen
+
+[Ubuntu unter windows installieren](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?hl=en-us&gl=us&activetab=pivot%3Aoverviewtab)
+
+
+### Installation Linux / WSL
 
 ```bash
+# install tools
 sudo apt update && sudo apt install openmpi-bin libopenmpi-dev
 
-# deactivate warning
-echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
-
+# check version
 mpicc --showme:version
-
 ```
 
 ### Build and run Linux
 
-```bash
-mpicc mpi_hello_world.c -o mpi_hello_world
+script:
 
-chmod +x mpi_hello_world.out
+    ./serve.sh
 
-mpirun -np 4 ./mpi_hello_world
-```
+manuell:
+
+    mpicc mpi_hello_world.c -o mpi_hello_world
+
+    chmod +x mpi_hello_world.out
+
+    mpirun -np 2 ./mpi_hello_world
 
 
 ## Installation unter Windows

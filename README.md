@@ -20,11 +20,11 @@ wsl --install -d Ubuntu
 # install tools
 sudo apt update && sudo apt install openmpi-bin libopenmpi-dev -y
 
-# deactivate warning
-echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
-
 # check version
 mpicc --showme:version
+
+# deactivate warning
+echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 ```
 
 ### Repository klonen
@@ -46,6 +46,21 @@ oder mit SSH:
 
     git clone git@github.com:Emergency1999/MPIHelloWorld.git
 
+#### Fehler "Operation not permitted"
+
+```bash
+cd /mnt
+sudo umount /mnt/c
+sudo mount -t drvfs C: /mnt/c -o metadata
+```
+
+anschließend in Windows CMD ausführen
+    
+```bat
+wsl --shutdown
+```
+
+jetzt WSL wieder starten und des Repository klonen.
 
 ### Build and run
 

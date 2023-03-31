@@ -24,11 +24,8 @@ echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 Stelle sicher das du im dem Ordner bist, in dem das Repository gespeichert werden soll.  
 Unter WSL sind alle Windowsdateien unter `/mnt/c/` (oder `/mnt/d/` etc.) zu finden.
 
-Bsp. für Speicherort:
+Bsp. für Speicherort: `cd /mnt/c/Users/<user>/Documents`
 
-```bash
-cd /mnt/c/Users/<user>/Documents/CA
-```
 
 Anschließend das Repository klonen:
     
@@ -37,22 +34,6 @@ Anschließend das Repository klonen:
 oder mit SSH:
 
     git clone git@github.com:Emergency1999/MPIHelloWorld.git
-
-#### Fehler "Operation not permitted"
-
-```bash
-cd /mnt
-sudo umount /mnt/c
-sudo mount -t drvfs C: /mnt/c -o metadata
-```
-
-anschließend in Windows CMD ausführen
-    
-```bat
-wsl --shutdown
-```
-
-jetzt WSL wieder starten und des Repository klonen.
 
 ### Build and run
 

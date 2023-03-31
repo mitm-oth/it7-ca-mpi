@@ -38,6 +38,19 @@ oder mit SSH:
 
     git clone git@github.com:Emergency1999/MPIHelloWorld.git
 
+### Install VScode (for VM)
+
+```bash
+sudo snap install --classic code
+
+```
+
+### Open in VScode
+
+```bash
+code .
+```
+
 ### Build and run
 
 Entweder kann das Skript `serve.sh` ausgeführt werden oder manuell die Befehle ausführen. 

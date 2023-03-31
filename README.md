@@ -6,7 +6,10 @@ Anweisungen von hier befolgen: [WSL/VM installieren](https://bookstack.kamaux.de
 
 ## Installation OpenMPI
 
-WSL starten (Windows Taste + "Ubuntu", oder in der Console `wsl` eingeben)
+Bash starten und folgende Befehle ausführen:
+
+WSL: Windows Taste + "Ubuntu", oder in der Console `wsl` eingeben
+
 
 ```bash
 # install tools

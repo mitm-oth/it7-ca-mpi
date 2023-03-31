@@ -10,6 +10,6 @@ chmod +x mpi_hello_world.out
 
 # run
 echo "[  RUN  ] Running mpi_hello_world.out"
-/usr/bin/mpirun -np 2 mpi_hello_world.out
+/usr/bin/mpirun -np 4 mpi_hello_world.out
 
 echo "[       ] Done"

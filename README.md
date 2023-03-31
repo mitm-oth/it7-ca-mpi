@@ -40,6 +40,7 @@ oder mit SSH:
 
 ### Open in VScode
 
+Das Projekt in VScode öffnen:
 ```bash
 code .
 ```
@@ -54,13 +55,4 @@ script:
 chmod +x serve.sh
 ./serve.sh
 ```
-
-manuell:
-
-```bash
-mpicc mpi_hello_world.c -o mpi_hello_world
-
-chmod +x mpi_hello_world.out
-
-mpirun -np 2 ./mpi_hello_world
-```
+die serve.sh startet standardmäßig 4 Prozesse.

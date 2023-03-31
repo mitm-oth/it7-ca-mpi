@@ -32,18 +32,19 @@ mpicc --showme:version
 Stelle sicher das du im dem Ordner bist, in dem das Repository gespeichert werden soll.  
 Unter WSL sind alle Windowsdateien unter `/mnt/c/` (oder `/mnt/d/` etc.) zu finden.
 
-Bsp für Speicherort:
+Bsp. für Speicherort:
 
 ```bash
-
 cd /mnt/c/Users/<user>/Documents/CA
+```
 
+Anschließend das Repository klonen:
+    
+    git clone https://github.com/Emergency1999/MPIHelloWorld.git
 
-```bash
+oder mit SSH:
 
-```bash
-
-
+    git clone git@github.com:Emergency1999/MPIHelloWorld.git
 
 
 ### Build and run

@@ -24,13 +24,14 @@ echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 
 ## Repository klonen
 
-Stelle sicher das du im dem Ordner bist, in dem das Repository gespeichert werden soll.  
+
+<!-- Stelle sicher das du im dem Ordner bist, in dem das Repository gespeichert werden soll.  
 Unter WSL sind alle Windowsdateien unter `/mnt/c/` (oder `/mnt/d/` etc.) zu finden.
 
-Bsp. für Speicherort: `cd /mnt/c/Users/<user>/Documents`
+Bsp. für Speicherort: `cd /mnt/c/Users/<user>/Documents` -->
 
 
-Anschließend das Repository klonen:
+das Repository klonen:
     
     git clone https://github.com/Emergency1999/MPIHelloWorld.git
 

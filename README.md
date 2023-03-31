@@ -8,13 +8,27 @@
 
 [Ubuntu unter windows installieren](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?hl=en-us&gl=us&activetab=pivot%3Aoverviewtab)
 
-oder in der Console ausführen:
+oder in der cmd ausführen:
 
 ```bat
 wsl --install -d Ubuntu
 ```
 
+Anschließend einen Nutzernamen und ein Passwort eingeben.
+
+#### Fehler "The Windows Subsystem for Linux optional component is not enabled"
+
+WSL muss erst aktiviert werden:
+
+Powershell als Admin öffnen und
+
+```bat
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+
 ### Installation OpenMPI
+
+WSL starten (Windows Taste + "Ubuntu", oder in der Console `wsl` eingeben)
 
 ```bash
 # install tools
@@ -81,17 +95,3 @@ chmod +x mpi_hello_world.out
 
 mpirun -np 2 ./mpi_hello_world
 ```
-
-
-## Installation unter Windows
-
-Beide Microsoft MPI SDK Installer herunterladen und ausführen: https://www.microsoft.com/en-us/download/details.aspx?id=57467 (2 Dateien)
-
-Falls Visual Studio nicht installiert ist, müssen die Visual C++ 2015 Build Tools installiert werden (ist Visual Studio installiert müssen die Pfade in der build.bat entsprechend angepasst werden): https://go.microsoft.com/fwlink/?LinkId=691126
-
-### Build and run Windows
-
-"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\cl" /I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include" /I"C:\Program Files (x86)\Microsoft SDKs\MPI\Include\x64" /I. /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Include" /I"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include" /I"C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt" /c MPIHelloWorld.cpp
-"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\amd64\link" /machine:x64 /out:MpiHelloWorld.exe /dynamicbase "msmpi.lib" /libpath:"C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64" /LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\lib\amd64" /LIBPATH:"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\Lib\x64" /LIBPATH:"C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x64" /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\Lib\10.0.10240.0\ucrt\x64" MPIHelloWorld.obj
-
-"C:\Program Files\Microsoft MPI\Bin\mpiexec.exe" -n 2 MpiHelloWorld.exe

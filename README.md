@@ -14,7 +14,7 @@ oder in der Console ausführen:
 wsl --install -d Ubuntu
 ```
 
-### Installation Linux / WSL
+### Installation unter Linux / WSL
 
 ```bash
 # install tools

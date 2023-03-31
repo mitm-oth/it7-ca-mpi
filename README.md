@@ -1,6 +1,6 @@
 # MPI Hello World
 
-## Installation under Linux oder WSL
+## Installation unter Linux oder WSL
 
 [Link zur Originalanleitung](https://amithkk.medium.com/setting-up-visual-studio-code-and-wsl-for-mpi-develoment-8df55758a31c)
 
@@ -14,17 +14,41 @@ oder in der Console ausführen:
 wsl --install -d Ubuntu
 ```
 
-### Installation unter Linux / WSL
+### Installation OpenMPI
 
 ```bash
 # install tools
-sudo apt update && sudo apt install openmpi-bin libopenmpi-dev
+sudo apt update && sudo apt install openmpi-bin libopenmpi-dev -y
+
+# deactivate warning
+echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
 
 # check version
 mpicc --showme:version
 ```
 
-### Build and run Linux
+### Repository klonen
+
+Stelle sicher das du im dem Ordner bist, in dem das Repository gespeichert werden soll.  
+Unter WSL sind alle Windowsdateien unter `/mnt/c/` (oder `/mnt/d/` etc.) zu finden.
+
+Bsp für Speicherort:
+
+```bash
+
+cd /mnt/c/Users/<user>/Documents/CA
+
+
+```bash
+
+```bash
+
+
+
+
+### Build and run
+
+Entweder kann das Skript `serve.sh` ausgeführt werden oder manuell die Befehle ausführen. 
 
 script:
 

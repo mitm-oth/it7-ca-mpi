@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.json": "jsonc",
+        "*.yml": "yaml",
+        "mpi.h": "c"
+    }
+}

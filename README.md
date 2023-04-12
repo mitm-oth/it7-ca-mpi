@@ -54,6 +54,9 @@ script:
 
 ```bash
 chmod +x serve.sh
-./serve.sh
+./serve.sh mpi_hello_world.c
 ```
-die serve.sh startet standardmäßig 4 Prozesse.
+die serve.sh startet standardmäßig 4 Prozesse, kann aber auch als 2. Parameter angegeben werden:
+```bash
+./serve.sh mpi_hello_world.c 4
+```

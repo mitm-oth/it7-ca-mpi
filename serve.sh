@@ -41,7 +41,7 @@ echo "[ BUILD ] Building $in"
 mpicc $in -o $out
 
 # run
-echo "[  RUN  ] Running $out"
-/usr/bin/mpirun -np 4 $out
+echo "[  RUN  ] Running $out with $processes processes"
+/usr/bin/mpirun -np $processes $out
 
 echo "[       ] Done"
